@@ -17,10 +17,6 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    // it('should return "Hello World!"', () => {
-    //   expect(appController.getHello()).toBe('Hello World!');
-    // });
-
     it('should return path to CDG from GRU', async () => {
       const route = await service.cheaperRoute('GRU', 'CDG');
       expect(route).toStrictEqual('GRU - BRC - SCL - ORL - CDG > $40');
