@@ -30,13 +30,13 @@ $ npm run test:cov
 
 ## API Rest
 
-# Buscar Melhores Rotas:
+### Buscar Melhores Rotas:
 
 (GET) /bestRoutes/:ORIGEM/:DESTINO
 Exemplo:
 /bestRoutes/gru/cdg
 
-# Atualizar Arquivos de Rotas:
+### Atualizar Arquivos de Rotas:
 
 (POST) /updateRoutes
 body:
