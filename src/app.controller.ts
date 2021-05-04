@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -11,5 +11,13 @@ export class AppController {
       origin.toUpperCase(),
       destiny.toUpperCase(),
     );
+  }
+
+  @Post('updateRoute')
+  updateRoutes(@Body() body) {
+    if (!body.from || !body.to || !body.price) {
+      return `You should inform "from", "to" and "price" at the body.`;
+    }
+    return this.appService.updateRoutes(body.from, body.to, body.price);
   }
 }

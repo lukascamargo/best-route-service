@@ -12,6 +12,7 @@ describe('AppController', () => {
       providers: [AppService],
     }).compile();
 
+    new AppService().readRoutesInput();
     appController = app.get<AppController>(AppController);
     service = app.get<AppService>(AppService);
   });
