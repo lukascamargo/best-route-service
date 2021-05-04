@@ -39,12 +39,6 @@ Exemplo:
 ### Atualizar Arquivos de Rotas:
 
 (POST) /updateRoutes
-body:
-from: string
-to: string
-price: string
+body: {from: string, to: string, price: string}
 
-Exemplo:
-from: 'GRU'
-to: 'CGH'
-price: '5'
+Exemplo: {from: 'GRU', to: 'CGH', price: '5'}
